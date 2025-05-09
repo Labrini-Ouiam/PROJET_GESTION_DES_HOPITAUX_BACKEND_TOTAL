@@ -14,9 +14,6 @@ public class Service {
     private Long idService;
     private String nom;
     private String description;
-    private boolean s = false;
-    private int codeUser;
-    private LocalDateTime dateLastAction = LocalDateTime.now();
 
     @ManyToOne
     private Hopital hopital;

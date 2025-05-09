@@ -14,9 +14,6 @@ public class Hopital {
     private Long idHopital;
     private String nom;
     private String adresse;
-    private boolean s = false;
-    private int codeUser;
-    private LocalDateTime dateLastAction = LocalDateTime.now();
 
     @ManyToOne
     private Region region;

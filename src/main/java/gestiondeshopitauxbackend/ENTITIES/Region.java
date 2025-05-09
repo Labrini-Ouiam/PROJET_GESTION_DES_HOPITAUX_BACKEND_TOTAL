@@ -14,9 +14,6 @@ public class Region {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idRegion;
     private String nom;
-    private boolean s = false;
-    private int codeUser;
-    private LocalDateTime dateLastAction = LocalDateTime.now();
 
     @OneToMany(mappedBy = "region")
     private List<Province> provinces;
@@ -24,6 +21,4 @@ public class Region {
     @OneToMany(mappedBy = "region")
     private List<Prefecture> prefectures;
 
-    @OneToMany(mappedBy = "region")
-    private List<Hopital> hopitaux;
 }

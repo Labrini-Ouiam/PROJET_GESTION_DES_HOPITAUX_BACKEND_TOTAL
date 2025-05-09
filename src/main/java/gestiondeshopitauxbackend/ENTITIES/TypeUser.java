@@ -13,9 +13,6 @@ public class TypeUser {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idTypeUser;
     private String role;
-    private boolean s = false;
-    private int codeUser;
-    private LocalDateTime dateLastAction = LocalDateTime.now();
 
     @OneToMany(mappedBy = "typeUser")
     private List<Utilisateur> utilisateurs;

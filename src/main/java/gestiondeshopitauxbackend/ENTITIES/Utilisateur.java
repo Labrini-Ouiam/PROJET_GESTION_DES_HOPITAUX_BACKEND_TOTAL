@@ -1,5 +1,7 @@
 package gestiondeshopitauxbackend.ENTITIES;
 
+import gestiondeshopitauxbackend.ENUMS.SpecialiteInfermier;
+import gestiondeshopitauxbackend.ENUMS.SpecialiteMedecin;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,11 +24,8 @@ public class Utilisateur {
     private String telephone;
     private String adresse;
     private String assuranceSocial;
-    private String specialiteMedecin;
-    private String specialiteInfermier;
-    private boolean s = false;
-    private int codeUser;
-    private LocalDateTime dateLastAction = LocalDateTime.now();
+    private SpecialiteMedecin specialiteMedecin;
+    private SpecialiteInfermier specialiteInfermier;
 
     @ManyToOne
     private TypeUser typeUser;
