@@ -115,7 +115,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>labrini.ouiam.gestiondeshopitauxbackendv1.GestiondeshopitauxbackendV1Application</mainClass>
+                    <mainClass>gestiondeshopitauxbackend.GestiondeshopitauxbackendV1Application</mainClass>
                 </configuration>
             </plugin>
         </plugins>
