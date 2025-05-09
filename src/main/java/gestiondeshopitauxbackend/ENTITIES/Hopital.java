@@ -16,7 +16,10 @@ public class Hopital {
     private String adresse;
 
     @ManyToOne
-    private Region region;
+    private Province province;
+
+    @ManyToOne
+    private Prefecture prefecture;
 
     @OneToMany(mappedBy = "hopital")
     private List<Service> services;

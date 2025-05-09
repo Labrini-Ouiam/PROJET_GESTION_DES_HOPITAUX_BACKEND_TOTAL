@@ -1,4 +1,6 @@
 package gestiondeshopitauxbackend.DTOS;
+import gestiondeshopitauxbackend.ENUMS.SpecialiteInfermier;
+import gestiondeshopitauxbackend.ENUMS.SpecialiteMedecin;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,9 +21,6 @@ public class UtilisateurDTO {
     private String adresse;
     private String assuranceSocial;
     private String role;
-    private String specialiteMedecin;
-    private String specialiteInfermier;
-    private boolean s = false;
-    private int codeUser;
-    private LocalDateTime dateLastAction;
+    private SpecialiteMedecin specialiteMedecin;
+    private SpecialiteInfermier specialiteInfermier;
 }

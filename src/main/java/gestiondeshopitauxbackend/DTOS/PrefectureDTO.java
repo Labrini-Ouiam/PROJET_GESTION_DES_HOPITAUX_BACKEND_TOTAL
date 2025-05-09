@@ -1,25 +1,10 @@
-package gestiondeshopitauxbackend.ENTITIES;
+package gestiondeshopitauxbackend.DTOS;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
-import java.util.List;
 
-@Entity
-@Data @NoArgsConstructor @AllArgsConstructor
-public class Prefecture {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Data
+public class PrefectureDTO {
     private Long idPrefecture;
     private String nom;
-    private boolean s = false;
-    private int codeUser;
-    private LocalDateTime dateLastAction = LocalDateTime.now();
-
-    @ManyToOne
-    private Region region;
-
-    @OneToMany(mappedBy = "prefecture")
-    private List<Hopital> hopitaux;
+    private String region;
 }
