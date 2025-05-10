@@ -26,6 +26,7 @@ public class UtilisateurController {
 
     @Operation(summary = "Créer un utilisateur")
     @ApiResponse(responseCode = "201", description = "Utilisateur créé")
+
     @PostMapping
     public ResponseEntity<UtilisateurDTO> createUser(
             @RequestBody @Schema(description = "DTO de l'utilisateur") UtilisateurDTO utilisateurDTO) {
