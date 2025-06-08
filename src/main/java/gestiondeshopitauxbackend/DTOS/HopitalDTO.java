@@ -12,4 +12,5 @@ public class HopitalDTO {
     private String region;
     private String province;
     private String prefecture;
+
 }

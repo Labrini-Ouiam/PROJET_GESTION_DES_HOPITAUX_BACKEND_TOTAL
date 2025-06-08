@@ -26,4 +26,5 @@ public class Hopital {
 
     @OneToMany(mappedBy = "hopital")
     private List<Utilisateur> utilisateurs;
+
 }

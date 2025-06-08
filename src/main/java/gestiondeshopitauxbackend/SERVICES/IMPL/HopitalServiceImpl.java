@@ -143,4 +143,5 @@ public class HopitalServiceImpl implements HopitalService {
     public void deleteHopital(Long id) {
         hopitalRepository.deleteById(id);
     }
+    
 }
