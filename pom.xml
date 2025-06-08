@@ -52,6 +52,7 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+<<<<<<< HEAD
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -72,6 +73,8 @@
             <version>1.5.5.Final</version>
             <scope>provided</scope>
         </dependency>
+=======
+>>>>>>> 69d03e5342e0464039c03c964e37d6ff877145c4
 
         <dependency>
             <groupId>com.h2database</groupId>
@@ -135,7 +138,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+<<<<<<< HEAD
                     <mainClass>labrini.ouiam.gestiondeshopitauxbackendv1.GestiondeshopitauxbackendV1Application</mainClass>
+=======
+                    <mainClass>gestiondeshopitauxbackend.GestiondeshopitauxbackendV1Application</mainClass>
+>>>>>>> 69d03e5342e0464039c03c964e37d6ff877145c4
                 </configuration>
             </plugin>
         </plugins>

@@ -1,0 +1,5 @@
+-- INSERT INTO type_user (id_type_user, role, s, code_user, date_last_action)
+-- VALUES (1, 'ADMIN', 0, 0, NOW());
+--
+-- INSERT INTO utilisateur (id_utilisateur, nom, prenom, email, password, type_user_id, s, code_user, date_last_action)
+-- VALUES (1, 'Admin', 'System', 'admin@hopital.com', '$2a$10$xVCH4IA5wG42aEdcI6nVf.7MS7dR5XzBtD5Jx6Yl3ZfQOPlWZzQ2m', 1, 0, 0, NOW());
