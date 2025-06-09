@@ -2,7 +2,6 @@ package gestiondeshopitauxbackend.WEB;
 
 import gestiondeshopitauxbackend.DTOS.ServiceDTO;
 import gestiondeshopitauxbackend.SERVICES.ServiceService;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,6 +29,13 @@ public class ServiceRestController {
     @PostMapping
     public ResponseEntity<ServiceDTO> createService(@RequestBody ServiceDTO dto) {
         return new ResponseEntity<>(serviceService.saveService(dto), HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ServiceDTO> updateService(@PathVariable Long id, @RequestBody ServiceDTO dto) {
+        dto.setIdService(id); // s'assurer que l'ID est bien mis à jour
+        ServiceDTO updated = serviceService.updateService(dto);
+        return ResponseEntity.ok(updated);
     }
 
     @DeleteMapping("/{id}")

@@ -20,9 +20,9 @@ public class ServiceServiceImpl implements ServiceService {
 
     @Override
     public ServiceDTO getService(Long id) {
-        Service service = (Service) serviceRepository.findById(id)
+        ServiceEntity service = (ServiceEntity) serviceRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Service not found"));
-        return mapper.fromService((ServiceEntity) service);
+        return mapper.fromService(service);
     }
 
     @Override
@@ -48,4 +48,21 @@ public class ServiceServiceImpl implements ServiceService {
     public void deleteService(Long id) {
         serviceRepository.deleteById(id);
     }
+
+    @Override
+    public ServiceDTO updateService(ServiceDTO dto) {
+        ServiceEntity service = (ServiceEntity) serviceRepository.findById(dto.getIdService())
+                .orElseThrow(() -> new RuntimeException("Service non trouvé"));
+
+        Hopital hopital = hopitalRepository.findById(dto.getHopital().getIdHopital())
+                .orElseThrow(() -> new RuntimeException("Hôpital non trouvé"));
+
+        ((ServiceEntity) service).setNom(dto.getNom());
+        ((ServiceEntity) service).setDescription(dto.getDescription());
+        ((ServiceEntity) service).setHopital(hopital);
+
+        ServiceEntity updated = serviceRepository.save(service);
+        return mapper.fromService((ServiceEntity) updated);
+    }
+
 }
