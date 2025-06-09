@@ -1,23 +1,19 @@
-package gestiondeshopitauxbackend.ENTITIES;
+package gestiondeshopitauxbackend.DTOS;
 
+import gestiondeshopitauxbackend.ENTITIES.Hopital;
+import gestiondeshopitauxbackend.ENTITIES.SousService;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
+
 import java.util.List;
 
-@Entity
 @Data @NoArgsConstructor @AllArgsConstructor
-public class Service {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ServiceDTO {
     private Long idService;
     private String nom;
     private String description;
-
-    @ManyToOne
     private Hopital hopital;
-
-    @OneToMany(mappedBy = "service")
-    private List<SousService> sousServices;
+    private List<SousServiceDTO> sousServicesDTO;
 }
