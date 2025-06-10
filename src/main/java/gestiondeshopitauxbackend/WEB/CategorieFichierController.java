@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/categories-fichier")
+@CrossOrigin
 public class CategorieFichierController {
 
     private final CategorieFichierService categorieService;

@@ -9,5 +9,4 @@ public class GestiondeshopitauxbackendV1Application {
     public static void main(String[] args) {
         SpringApplication.run(GestiondeshopitauxbackendV1Application.class, args);
     }
-
 }

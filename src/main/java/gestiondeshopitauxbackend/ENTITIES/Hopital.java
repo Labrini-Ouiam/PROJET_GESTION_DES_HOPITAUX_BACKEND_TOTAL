@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
+
 import java.util.List;
 
 @Entity
@@ -22,7 +22,7 @@ public class Hopital {
     private Prefecture prefecture;
 
     @OneToMany(mappedBy = "hopital")
-    private List<Service> services;
+    private List<ServiceEntity> services;
 
     @OneToMany(mappedBy = "hopital")
     private List<Utilisateur> utilisateurs;

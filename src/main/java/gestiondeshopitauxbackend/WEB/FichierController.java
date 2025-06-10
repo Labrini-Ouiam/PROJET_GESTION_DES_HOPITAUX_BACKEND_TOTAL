@@ -42,8 +42,10 @@ public class FichierController {
         return ResponseEntity.noContent().build();
     }
 }*/
+
 @RestController
 @RequestMapping("/fichiers")
+@CrossOrigin
 public class FichierController {
 
     private final FichierService fichierService;

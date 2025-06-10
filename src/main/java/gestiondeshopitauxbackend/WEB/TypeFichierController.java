@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @Tag(name = "Type de Fichier", description = "Gestion des types de fichiers")
 @RestController
 @RequestMapping("/types-fichiers")
