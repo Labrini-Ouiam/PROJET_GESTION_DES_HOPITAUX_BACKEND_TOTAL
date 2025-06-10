@@ -43,7 +43,7 @@ public class ResultatExamenController {
         return ResponseEntity.noContent().build();
     }
 }*/
-
+@CrossOrigin
 @RestController
 @RequestMapping("/resultats-examen")
 public class ResultatExamenController {

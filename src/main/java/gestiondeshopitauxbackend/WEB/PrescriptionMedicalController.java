@@ -43,7 +43,7 @@ public class PrescriptionMedicalController {
         return ResponseEntity.noContent().build();
     }
 }*/
-
+@CrossOrigin
 @RestController
 @RequestMapping("/prescriptions")
 public class PrescriptionMedicalController {

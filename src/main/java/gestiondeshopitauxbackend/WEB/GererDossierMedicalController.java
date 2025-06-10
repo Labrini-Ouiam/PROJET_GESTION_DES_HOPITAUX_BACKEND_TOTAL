@@ -48,6 +48,7 @@ import java.util.List;
 //        return ResponseEntity.noContent().build();
 //    }
 //}
+@CrossOrigin
 @RestController
 @RequestMapping("/gererdossiers")
 public class GererDossierMedicalController {

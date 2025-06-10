@@ -1,5 +1,4 @@
 package gestiondeshopitauxbackend.DTOS;
-
 import lombok.Data;
 
 @Data

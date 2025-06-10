@@ -11,10 +11,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @Tag(name = "Utilisateurs", description = "Gestion des utilisateurs du système")
 @RestController
-//@RequestMapping("/api/utilisateurs")
 @RequestMapping("/utilisateurs")
 public class UtilisateurController {
 

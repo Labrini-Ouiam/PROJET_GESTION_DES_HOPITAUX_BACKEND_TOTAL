@@ -6,13 +6,18 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor
+@Table(name = "sous_service")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SousService {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idSousService;
     private String nom;
     private String description;
-
+    
     @ManyToOne
+    @JoinColumn(name = "service_id")
     private ServiceEntity service;
 }
