@@ -28,6 +28,7 @@ public class Utilisateur {
     private SpecialiteInfermier specialiteInfermier;
 
     @ManyToOne
+    @JoinColumn(name = "type_user_id_type_user")
     private TypeUser typeUser;
 
     @ManyToOne

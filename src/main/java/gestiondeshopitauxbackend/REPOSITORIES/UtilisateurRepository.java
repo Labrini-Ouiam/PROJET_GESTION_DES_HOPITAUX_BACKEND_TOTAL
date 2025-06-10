@@ -14,4 +14,7 @@ public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> 
 
     // Recherche par nom ou prénom contenant un mot-clé
     List<Utilisateur> findByNomContainingIgnoreCaseOrPrenomContainingIgnoreCase(String nom, String prenom);
+
+    // Recherche par email
+    Utilisateur findByEmail(String email);
 }
